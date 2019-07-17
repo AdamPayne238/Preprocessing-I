@@ -21,7 +21,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -48,6 +47,14 @@ table {
 	border-spacing: 0;
 }
 
+//
+//FONT FAMILES FROM GOOGLE USE TO STYLE TEXT
+// font-family: 'Bahianita', cursive;
+// font-family: 'Literata', serif;
+// font-family: 'DM Serif Text', serif;
+// font-family: 'Fira Sans', sans-serif;
+// font-family: 'Barriecito', cursive;
+//
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
@@ -57,3 +64,146 @@ html, body {
     height: 100%;
 }
 
+
+//
+
+//use two mixins
+.container(){
+	background: coral;
+}
+
+.adam(){
+	border: solid 1px black;
+}
+
+//variable color coral
+@background: blue;
+
+.main-container{
+	.container();
+}
+
+html{
+	background: @background;
+}
+
+h1{
+	font-family: 'Bahianita', cursive;
+	font-size: 400%;
+	display: flex;
+	justify-content: center;
+	padding: 20px 0px;
+	.adam();
+}
+
+h2{
+	font-family: 'Literata', serif;
+	font-size: 175%;	
+	padding: 20px 0px;
+}
+
+h3{
+	font-family: 'DM Serif Text', serif;
+	font-size: 155%;
+	padding: 20px 0px;
+}
+
+p{
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 135%;
+	padding: 20px 0px;
+}
+
+li{
+	font-family: 'Barriecito', cursive;
+	font-size: 100%;
+}
+
+nav a{
+	font-family: 'Notable', sans-serif;
+	padding: 10px;
+
+}
+
+.top-nav{
+	display: flex;
+	justify-content: flex-end;
+
+}
+
+.main-img img{
+	width: 100%;
+	height: 450px;
+	object-fit: cover;
+  }
+
+.title-text-and-img{
+	display: flex;
+	flex-direction: column;
+	padding: 20px 0px;
+}
+
+
+
+.listen-good{
+	display: flex;
+}
+
+.listen-up{
+
+	width: 50%;
+}
+
+.good-things{
+
+	width: 50%;
+}
+
+
+.copyright{
+	display: flex;
+	justify-content: center
+}
+
+button{
+	background-color: blue;
+	border: none;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 50%;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+//other Sh**
+@media screen and (max-width: 500px){
+    .main-container{
+		width: 100%;
+        display: flex;
+        flex-direction: column;
+	}
+	button{
+		display: none;
+	}
+	.listen-good{
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.history{
+		display: flex;
+		border: solid 1px black;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.work-history{
+		width: 50%;
+	}
+	
+	.continued{
+		width: 50%;
+	}
+}
